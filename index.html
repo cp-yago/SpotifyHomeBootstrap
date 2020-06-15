@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Spotify</title>
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+
+    <div class="root">
+
+        <!-- Início barra de navegação lateral -->
+        <nav class="nav-bar d-flex flex-column">
+            <div class="nav-bar-header d-flex pl-4 pt-4 pb-4">
+                <img src="img/logo.svg" class="logo">
+            </div>
+
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a href="" class="nav-link d-flex align-items-center">
+                        <i class="fas fa-home"></i>
+                        <span>Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link d-flex align-items-center">
+                        <i class="fas fa-search"></i>
+                        <span>Buscar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link d-flex align-items-center">
+                        <i class="fas fa-stream"></i>
+                        <span>Sua Biblioteca</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="root-list d-flex flex-column mt-4">
+
+                <div class="root-list-header">
+                    <h2>Playlist</h2>
+                </div>
+
+                <div class="root-list-body">
+                    <div class="root-list-item d-flex">
+                        <div class="root-list-icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-plus text-dark"></i>
+                        </div>
+                        <span>Criar Playlist</span>
+                    </div>
+                    <div class="root-list-item d-flex">
+                        <div class="root-list-icon heart d-flex justify-content-center align-items-center">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <span>Músicas curtidas</span>
+                    </div>
+                </div>
+
+                <hr class="root-list-divider"/>
+
+                <ul class="navbar-nav playlist-scroll overflow-auto">
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Músicas de filmes que marcaram</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Rap</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Rock Nacional</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Eletrônico</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Rock anos 70</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Blues</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="playlist-item d-flex align-items-center">
+                            <a href="">Mpb</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="navbar-footer">
+                    <a href="" class="d-flex align-items-center">
+                        <i class="fas fa-arrow-circle-down mr-2"></i>
+                        <span>Instalar aplicativo</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </nav>
+        <!-- Fim barra de navegação lateral -->
+
+        <!-- Início da barra superior -->
+        <div class="top-bar">
+            <header id="header" class="d-flex position-relative">
+                <div id="header-overlay"></div>
+                <div class="icons-action-left d-flex">
+                    <button class="d-flex justify-content-center align-items-center">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="d-flex justify-content-center align-items-center ml-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="d-flex ml-auto">
+                    <button class="btn-upgrade">Faça Upgrade</button>
+                    <div class="dropdown menu ml-3">
+                        <button type="button" class="d-flex align-items-center" data-toggle="dropdown">
+                            <img src="img/avatar.jpg" class="avatar">
+                            <span>Yago Cunha</span>
+                            <i class="fas fa-caret-down ml-2 mr-2"></i>
+                        </button>
+                        <div class="dropdown-menu mt-0 p-0">
+                            <a href="" class="dropdown-item">Conta</a>
+                            <a href="" class="dropdown-item">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="" class="dropdown-item">Sair</a>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+        </div>
+        <!-- Fim da barra superior -->
+
+        <!-- Inicio parte principal -->
+        <div id="main" class="main d-flex flex-column">
+            <div class="margin-top"></div>
+
+            <div class="main-container">
+                <h2 class="title mb-3">Tocado recentemente</h2>
+                <!-- Inicio Row -->
+                <div class="row list mb-5">
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/1.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">The Struts</h5>
+                                    <p class="card-text">This is The Neighbourhood. The essential tracks, all in one playlist.</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/2.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">This Is Greta Van Fleet</h5>
+                                    <p class="card-text">The essential Greta Van Fleet all in one place.</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/3.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Greta Van Fleet Rádio</h5>
+                                    <p class="card-text">Com The Black Keys, Alice In Chains, The Raconteurs e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/4.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">The Strokes: The New Abnormal</h5>
+                                    <p class="card-text">Our new album The New Abnormal is out now!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/5.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">TrapHypeGermany</h5>
+                                    <p class="card-text">Ihr wollt in die Playlist? Dann schreibt gerne @traphypegermany eine Nachricht über Instagram!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/6.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Tech House Top 50</h5>
+                                    <p class="card-text">Welcome to the tech house corner! Including tracks from Fisher Chris Lake Sonny Fodera Solardo Diplo Campelphat Martin Ikin Danny Howard Chris Lorenzo Low Steppa & more!</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                </div>
+                <!-- Fim row -->
+
+                <div class="d-flex align-items-center mb-3">
+                    <div>
+                        <h2 class="title mb-1">Feito para Yago</h2>
+                        <span class="subtitle">Quanto mais você escutar, melhores recomendações vai receber.</span>
+                    </div>
+                    <a class="view-more ml-auto" href="">Ver tudo</a>
+                </div>
+
+                <div class="row list mb-5">
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/7.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">City Jungle</h5>
+                                    <p class="card-text">Coruna</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/8.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Expandro</h5>
+                                    <p class="card-text">Avorati</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/9.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Praxan</h5>
+                                    <p class="card-text">Durelo</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/10.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Daily Mix 1</h5>
+                                    <p class="card-text">El Efecto, Fabio Brazza, 5 a Seco e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/11.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Daily Mix 2</h5>
+                                    <p class="card-text">Alok, Matheus & Kauan, Marília Mendonça e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/12.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Daily Mix 3</h5>
+                                    <p class="card-text">The Blue Stones, Macklemore, The 1975 e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                </div> 
+                
+                <h2 class="title mb-3">Não sai dos seus ouvidos</h2>
+                <!-- Inicio Row -->
+                <div class="row list mb-5">
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/13.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Daily Mix 4</h5>
+                                    <p class="card-text">Emery Warman, Max Chapman, ATFC e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/14.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">Daily Mix 5</h5>
+                                    <p class="card-text">Sander Kleinenberg, Cazztek, Ciszak e mais</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                    <!-- Início do card -->
+                    <div class="col-12 col-md-3 col-lg-2">
+                        <div class="card">
+                            <a href="">
+                                <img src="img/cards/15.jpg" class="card-img-top rounded-0 mb-3">
+                            </a>
+                            <div class="card-body p-0">
+                                <a href="">
+                                    <h5 class="card-title">This Is Bhaskar</h5>
+                                    <p class="card-text">The essential tracks from Bhaskar in one playlist.</p>
+                                </a>
+                            </div>
+                            <div class="btn-play">
+                                <button class="d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do card -->
+                </div>
+                <!-- Fim row -->
+
+            </div>
+        </div>
+        <!-- Fim parte principal -->
+
+        <!-- Início do player -->
+        <div class="player d-flex align-items-center">
+            <footer class="w-100"> 
+                <div class="row">
+                    <!-- Início media art -->
+                    <div class="col-3 d-flex align-items-center">
+                        <div class="cover">
+                            <img src="img/cards/1.jpg">
+                        </div>
+                        <div class="d-flex flex-column text ml-3 mr-3">
+                            <label class="m-0">In Love With The Camera</label>
+                            <span class="color-default">The Struts</span>
+                        </div>
+
+                        <div class="d-flex icon justify-content-center align-items-center">
+                            <i class="far fa-heart color-default"></i>
+                        </div>
+                        <div class="d-flex icon justify-content-center align-items-center">
+                            <i class="fas fa-image color-default"></i>
+                        </div>
+                    </div>
+                    <!-- Fim media art -->
+
+                    <!-- Início player controller -->
+                    <div class="col-6 d-flex align-items-center justify-content-center">
+                        <div class="player-center">
+                            <div class="player-center-controls d-flex justify-content-between align-items-center">
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-random color-default"></i>
+                                </button>
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-angle-left color-default"></i>
+                                </button>
+                                <button class="play icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="far fa-play-circle color-default"></i>
+                                </button>
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-angle-right color-default"></i>
+                                </button>
+                                <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                                    <i class="fas fa-redo color-default"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="progress-time">
+                                    <span class="color-default">0:00</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="progress-time">
+                                    <span class="color-default">3:09</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim player controller -->
+                    
+                    <!-- Início volume control -->
+                    <div class="col-3 d-flex align-items-center justify-content-end">
+                        <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                            <i class="fas fa-list-ul color-default"></i>
+                        </button>
+                        <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                            <i class="fas fa-desktop color-default"></i>
+                        </button>
+                        <button class="icon btn btn-link d-flex justify-content-center align-items-center">
+                            <i class="fas fa-volume-up color-default"></i>
+                        </button>
+
+                        <div class="volume-bar">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim volume control -->
+                </div>
+            </footer>
+        </div>
+        <!-- Fim do player -->
+
+    </div>
+
+    <script>
+        let main = document.getElementById('main');
+        let header = document.getElementById('header-overlay');
+
+        main.addEventListener('scroll',function(event){
+            var scroll = this.scrollTop;
+            if(scroll < 60){
+                header.style.opacity = '.' + scroll
+            }else {
+                header.style.opacity = 1
+            }
+        })
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
